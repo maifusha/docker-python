@@ -1,8 +1,11 @@
 > Docker image for python2.7
 
-[![build status](https://git.maifusha.com/docker/python/badges/master/build.svg)](https://git.maifusha.com/docker/python/commits/master)
+#### Badages
+```
+[![build status](https://git.yoursite.com/docker/python/badges/master/build.svg)](https://git.yoursite.com/docker/python/commits/master)
+```
 
-
+#### Quick Start
 ```bash
-docker run -it 121.40.145.76:4567/docker/python:latest python
+docker run -it git.yoursite.com:5005/docker/python:latest python
 ```

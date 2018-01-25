@@ -1,8 +1,12 @@
 FROM python:2.7-alpine
 
-MAINTAINER LiXin "1045909037@qq.com"
+LABEL maintainer="lixin <1045909037@qq.com>"
+
+COPY conf/pip.conf /etc/pip.conf
 
 RUN sed -i "s/dl-cdn.alpinelinux.org/mirrors.ustc.edu.cn/g" /etc/apk/repositories \
     && apk update
 
-COPY conf/pip.conf /etc/pip.conf
+RUN apk add --no-cache tzdata
+
+RUN ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
